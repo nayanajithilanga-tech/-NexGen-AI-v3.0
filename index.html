@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexGen AI — Free AI Tools for Content Creators & Marketers</title>
+  <meta name="description" content="Free AI tools for YouTube, Instagram, TikTok, blogging, SEO, and more. Generate titles, captions, hashtags, blog posts, and resumes in seconds. Powered by GPT-4o.">
+  <meta name="keywords" content="free ai tools, youtube title generator, instagram caption generator, ai blog writer, seo keyword generator, tiktok hooks, hashtag generator, ai content creator tools">
+  <meta name="author" content="Dilshan Nayanajith Ilangasinghe">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nexgenai.tools/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nexgenai.tools/">
+  <meta property="og:title" content="NexGen AI — Free AI Tools for Content Creators">
+  <meta property="og:description" content="12+ free AI tools for YouTube, Instagram, TikTok, blogging, and SEO. Generate professional content in seconds.">
+  <meta property="og:image" content="https://nexgenai.tools/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NexGen AI — Free AI Tools for Content Creators">
+  <meta name="twitter:description" content="12+ free AI tools for YouTube, Instagram, TikTok, blogging, and SEO.">
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "NexGen AI",
+    "url": "https://nexgenai.tools",
+    "description": "Free AI tools for content creators, marketers, and freelancers",
+    "author": {
+      "@type": "Person",
+      "name": "Dilshan Nayanajith Ilangasinghe",
+      "email": "nayanajithilangasinghe2002@gmail.com"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://nexgenai.tools/blog?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── CSS Variables ─────────────────────────────────────── */
+    :root {
+      --bg: #0a0a0f;
+      --bg2: #111118;
+      --bg3: #16161f;
+      --card: #1a1a26;
+      --card-hover: #1f1f30;
+      --border: rgba(255,255,255,0.07);
+      --border-hover: rgba(139,92,246,0.4);
+      --text: #f0f0f8;
+      --text2: #a0a0b8;
+      --text3: #6060a0;
+      --accent: #8b5cf6;
+      --accent2: #06b6d4;
+      --accent3: #f59e0b;
+      --green: #10b981;
+      --red: #ef4444;
+      --gradient: linear-gradient(135deg, #8b5cf6, #06b6d4);
+      --gradient2: linear-gradient(135deg, #f59e0b, #ef4444);
+      --shadow: 0 8px 32px rgba(0,0,0,0.4);
+      --radius: 16px;
+      --radius-sm: 10px;
+      --font-display: 'Syne', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+      --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    [data-theme="light"] {
+      --bg: #f8f8fc;
+      --bg2: #ffffff;
+      --bg3: #f0f0f8;
+      --card: #ffffff;
+      --card-hover: #f5f5ff;
+      --border: rgba(0,0,0,0.08);
+      --border-hover: rgba(139,92,246,0.4);
+      --text: #0a0a1a;
+      --text2: #444460;
+      --text3: #8888aa;
+      --shadow: 0 8px 32px rgba(0,0,0,0.08);
+    }
+
+    /* ── Reset & Base ──────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      overflow-x: hidden;
+      transition: background var(--transition), color var(--transition);
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; height: auto; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+    /* ── Scrollbar ─────────────────────────────────────────── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg2); }
+    ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
+
+    /* ── Typography ────────────────────────────────────────── */
+    h1,h2,h3,h4,h5 { font-family: var(--font-display); line-height: 1.2; }
+    .display { font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 800; letter-spacing: -0.03em; }
+    .subtitle { font-size: clamp(1.1rem, 2vw, 1.3rem); color: var(--text2); font-weight: 400; }
+
+    /* ── Layout ────────────────────────────────────────────── */
+    .container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 80px 0; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    @media (max-width: 1024px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 768px) {
+      .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+      .section { padding: 56px 0; }
+      .display { font-size: 2.4rem; }
+    }
+
+    /* ── Background Decorations ────────────────────────────── */
+    .bg-glow {
+      position: fixed; pointer-events: none; z-index: 0;
+      border-radius: 50%; filter: blur(120px); opacity: 0.12;
+    }
+    .bg-glow-1 { width: 600px; height: 600px; background: #8b5cf6; top: -200px; right: -200px; }
+    .bg-glow-2 { width: 500px; height: 500px; background: #06b6d4; bottom: -200px; left: -200px; }
+
+    /* ── Navigation ────────────────────────────────────────── */
+    nav {
+      position: sticky; top: 0; z-index: 1000;
+      background: rgba(10, 10, 15, 0.85);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      transition: background var(--transition);
+    }
+    [data-theme="light"] nav { background: rgba(248,248,252,0.9); }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px; gap: 32px;
+    }
+    .logo {
+      font-family: var(--font-display); font-size: 1.4rem; font-weight: 800;
+      background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; white-space: nowrap;
+    }
+    .nav-links { display: flex; gap: 4px; align-items: center; flex: 1; justify-content: center; }
+    .nav-link {
+      padding: 8px 16px; border-radius: 8px; font-size: 0.9rem; font-weight: 500;
+      color: var(--text2); transition: all var(--transition); cursor: pointer;
+    }
+    .nav-link:hover, .nav-link.active { color: var(--text); background: var(--card); }
+    .nav-actions { display: flex; gap: 8px; align-items: center; }
+    .lang-select {
+      background: var(--card); border: 1px solid var(--border); color: var(--text);
+      border-radius: 8px; padding: 6px 10px; font-size: 0.85rem; cursor: pointer;
+      font-family: inherit;
+    }
+    .theme-btn {
+      width: 38px; height: 38px; border-radius: 8px; background: var(--card);
+      border: 1px solid var(--border); display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; transition: all var(--transition);
+    }
+    .theme-btn:hover { background: var(--card-hover); border-color: var(--accent); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; padding: 8px; }
+    .hamburger span { width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all var(--transition); }
+    @media (max-width: 768px) {
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: var(--bg2); padding: 16px; border-bottom: 1px solid var(--border); gap: 4px; }
+      .nav-links.open { display: flex; }
+      .hamburger { display: flex; }
+      nav { position: relative; }
+    }
+
+    /* ── Buttons ───────────────────────────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px;
+      border-radius: 10px; font-family: var(--font-body); font-weight: 600; font-size: 0.95rem;
+      transition: all var(--transition); cursor: pointer; border: none;
+    }
+    .btn-primary {
+      background: var(--gradient); color: #fff;
+      box-shadow: 0 4px 20px rgba(139,92,246,0.35);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(139,92,246,0.5); }
+    .btn-secondary {
+      background: var(--card); color: var(--text); border: 1px solid var(--border);
+    }
+    .btn-secondary:hover { border-color: var(--accent); background: var(--card-hover); }
+    .btn-sm { padding: 8px 16px; font-size: 0.85rem; border-radius: 8px; }
+    .btn-full { width: 100%; justify-content: center; }
+    .btn:disabled { opacity: 0.5; pointer-events: none; }
+
+    /* ── Cards ─────────────────────────────────────────────── */
+    .card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 24px; transition: all var(--transition);
+    }
+    .card:hover { border-color: var(--border-hover); background: var(--card-hover); }
+    .card-clickable { cursor: pointer; }
+    .card-clickable:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+
+    /* ── Hero Section ──────────────────────────────────────── */
+    .hero {
+      min-height: calc(100vh - 64px); display: flex; align-items: center;
+      position: relative; overflow: hidden; padding: 80px 0;
+    }
+    .hero-content { text-align: center; max-width: 860px; margin: 0 auto; position: relative; z-index: 1; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px;
+      background: rgba(139,92,246,0.15); border: 1px solid rgba(139,92,246,0.3);
+      border-radius: 100px; font-size: 0.85rem; color: #a78bfa; margin-bottom: 24px;
+      font-weight: 500;
+    }
+    .hero-badge::before { content: '●'; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+    .hero h1 { margin-bottom: 20px; }
+    .hero h1 span { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero .subtitle { margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 56px; }
+    .hero-stats { display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; }
+    .stat { text-align: center; }
+    .stat-num { font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .stat-label { font-size: 0.85rem; color: var(--text2); margin-top: 2px; }
+    /* Hero grid animation */
+    .hero-grid {
+      position: absolute; inset: 0; z-index: 0; opacity: 0.04;
+      background-image: linear-gradient(var(--text) 1px, transparent 1px), linear-gradient(90deg, var(--text) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    /* ── Page Views (SPA) ──────────────────────────────────── */
+    .page { display: none; }
+    .page.active { display: block; }
+
+    /* ── Tool Grid ─────────────────────────────────────────── */
+    .tool-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 24px; cursor: pointer; transition: all var(--transition); position: relative; overflow: hidden;
+    }
+    .tool-card::before {
+      content: ''; position: absolute; inset: 0;
+      background: var(--gradient); opacity: 0; transition: opacity var(--transition);
+    }
+    .tool-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(139,92,246,0.2); border-color: var(--accent); }
+    .tool-card:hover::before { opacity: 0.05; }
+    .tool-icon { font-size: 2rem; margin-bottom: 12px; display: block; }
+    .tool-name { font-family: var(--font-display); font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
+    .tool-desc { font-size: 0.85rem; color: var(--text2); line-height: 1.5; }
+    .tool-tag {
+      display: inline-block; margin-top: 12px; padding: 3px 10px; border-radius: 100px;
+      font-size: 0.75rem; font-weight: 600; background: rgba(139,92,246,0.15); color: #a78bfa;
+    }
+
+    /* ── Tool Workspace ────────────────────────────────────── */
+    #toolWorkspace { display: none; }
+    .workspace-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius); overflow: hidden;
+    }
+    .workspace-header {
+      background: var(--bg3); padding: 20px 28px; display: flex; align-items: center; gap: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .workspace-body { padding: 28px; }
+    .back-btn {
+      display: flex; align-items: center; gap: 8px; color: var(--text2);
+      font-size: 0.9rem; transition: color var(--transition); cursor: pointer;
+    }
+    .back-btn:hover { color: var(--accent); }
+
+    /* ── Form Elements ─────────────────────────────────────── */
+    .form-group { margin-bottom: 20px; }
+    label { display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 8px; color: var(--text2); }
+    input, textarea, select {
+      width: 100%; padding: 12px 16px; background: var(--bg3); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); color: var(--text); font-family: var(--font-body);
+      font-size: 0.95rem; transition: border-color var(--transition); outline: none; resize: vertical;
+    }
+    input:focus, textarea:focus, select:focus { border-color: var(--accent); }
+    input::placeholder, textarea::placeholder { color: var(--text3); }
+    select option { background: var(--bg2); }
+
+    /* ── Output Area ───────────────────────────────────────── */
+    .output-area {
+      background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius-sm);
+      padding: 20px; min-height: 200px; white-space: pre-wrap; font-size: 0.95rem;
+      line-height: 1.8; color: var(--text); display: none; position: relative;
+    }
+    .output-area.visible { display: block; }
+    .copy-btn {
+      position: absolute; top: 12px; right: 12px;
+      background: var(--card); border: 1px solid var(--border); color: var(--text2);
+      padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; transition: all var(--transition);
+    }
+    .copy-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .loading-indicator {
+      display: none; align-items: center; gap: 12px; padding: 20px;
+      color: var(--text2); font-size: 0.95rem;
+    }
+    .loading-indicator.visible { display: flex; }
+    .spinner {
+      width: 20px; height: 20px; border: 2px solid var(--border);
+      border-top-color: var(--accent); border-radius: 50%; animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── Chat ──────────────────────────────────────────────── */
+    .chat-container { height: calc(100vh - 200px); display: flex; flex-direction: column; }
+    .chat-messages {
+      flex: 1; overflow-y: auto; padding: 24px; display: flex; flex-direction: column; gap: 16px;
+    }
+    .msg { max-width: 80%; }
+    .msg.user { align-self: flex-end; }
+    .msg.bot { align-self: flex-start; }
+    .msg-bubble {
+      padding: 14px 18px; border-radius: 16px; font-size: 0.95rem; line-height: 1.7;
+      white-space: pre-wrap;
+    }
+    .msg.user .msg-bubble { background: var(--gradient); color: #fff; border-bottom-right-radius: 4px; }
+    .msg.bot .msg-bubble { background: var(--card); border: 1px solid var(--border); border-bottom-left-radius: 4px; }
+    .chat-input-area {
+      padding: 16px 24px; border-top: 1px solid var(--border); display: flex; gap: 12px;
+    }
+    .chat-input-area input { border-radius: 12px; }
+    .chat-input-area button { flex-shrink: 0; padding: 12px 24px; border-radius: 12px; }
+
+    /* ── Blog ──────────────────────────────────────────────── */
+    .blog-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+      overflow: hidden; transition: all var(--transition); cursor: pointer;
+    }
+    .blog-card:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: var(--shadow); }
+    .blog-thumb {
+      height: 200px; display: flex; align-items: center; justify-content: center;
+      font-size: 4rem;
+    }
+    .blog-thumb.ai-tools { background: linear-gradient(135deg, #8b5cf6, #06b6d4); }
+    .blog-thumb.money-online { background: linear-gradient(135deg, #10b981, #06b6d4); }
+    .blog-thumb.youtube-growth { background: linear-gradient(135deg, #ef4444, #f59e0b); }
+    .blog-thumb.seo-guide { background: linear-gradient(135deg, #3b82f6, #8b5cf6); }
+    .blog-thumb.tiktok-strategy { background: linear-gradient(135deg, #0ea5e9, #8b5cf6); }
+    .blog-thumb.freelancing { background: linear-gradient(135deg, #f59e0b, #ef4444); }
+    .blog-thumb.passive-income { background: linear-gradient(135deg, #10b981, #3b82f6); }
+    .blog-thumb.instagram-marketing { background: linear-gradient(135deg, #ec4899, #f59e0b); }
+    .blog-thumb.linkedin-strategy { background: linear-gradient(135deg, #0ea5e9, #3b82f6); }
+    .blog-thumb.business-ideas { background: linear-gradient(135deg, #8b5cf6, #f59e0b); }
+    .blog-info { padding: 20px; }
+    .blog-cat { font-size: 0.8rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
+    .blog-title { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; line-height: 1.3; }
+    .blog-excerpt { font-size: 0.88rem; color: var(--text2); line-height: 1.6; margin-bottom: 14px; }
+    .blog-meta { font-size: 0.8rem; color: var(--text3); display: flex; gap: 12px; align-items: center; }
+    .blog-post-content { max-width: 800px; margin: 0 auto; }
+    .blog-post-content h2 { font-size: 1.5rem; margin: 36px 0 16px; color: var(--text); }
+    .blog-post-content h3 { font-size: 1.2rem; margin: 28px 0 12px; color: var(--text); }
+    .blog-post-content p { margin-bottom: 18px; color: var(--text2); line-height: 1.8; }
+    .blog-post-content ul, .blog-post-content ol { margin: 16px 0 20px 24px; color: var(--text2); }
+    .blog-post-content li { margin-bottom: 8px; line-height: 1.7; }
+    .blog-post-content table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    .blog-post-content th { background: var(--bg3); padding: 12px 16px; text-align: left; font-size: 0.9rem; }
+    .blog-post-content td { padding: 12px 16px; border-bottom: 1px solid var(--border); font-size: 0.9rem; color: var(--text2); }
+    .blog-post-content strong { color: var(--text); font-weight: 600; }
+
+    /* ── Static Pages ──────────────────────────────────────── */
+    .static-page { max-width: 860px; margin: 0 auto; padding: 60px 24px; }
+    .static-page h1 { font-size: 2.4rem; margin-bottom: 8px; }
+    .static-page h2 { font-size: 1.4rem; margin: 36px 0 12px; }
+    .static-page p, .static-page li { color: var(--text2); line-height: 1.8; margin-bottom: 14px; }
+    .static-page ul { margin: 0 0 20px 24px; }
+    .static-page .meta { color: var(--text3); font-size: 0.9rem; margin-bottom: 36px; }
+
+    /* ── AdSense Placeholder ───────────────────────────────── */
+    .ad-slot {
+      background: var(--bg3); border: 1px dashed var(--border); border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center; color: var(--text3);
+      font-size: 0.8rem; text-align: center; min-height: 90px; margin: 24px 0;
+    }
+    .ad-slot-large { min-height: 250px; }
+
+    /* ── Alerts ────────────────────────────────────────────── */
+    .alert {
+      padding: 14px 18px; border-radius: var(--radius-sm); font-size: 0.9rem;
+      margin-bottom: 16px; border: 1px solid;
+    }
+    .alert-error { background: rgba(239,68,68,0.1); border-color: rgba(239,68,68,0.3); color: #fca5a5; }
+    .alert-success { background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.3); color: #6ee7b7; }
+    .alert-info { background: rgba(139,92,246,0.1); border-color: rgba(139,92,246,0.3); color: #c4b5fd; }
+
+    /* ── Section Headers ───────────────────────────────────── */
+    .section-header { text-align: center; margin-bottom: 56px; }
+    .section-header h2 { font-size: clamp(1.8rem, 3vw, 2.8rem); margin-bottom: 12px; }
+    .section-header p { color: var(--text2); font-size: 1.1rem; max-width: 560px; margin: 0 auto; }
+    .gradient-text { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+    /* ── Features ──────────────────────────────────────────── */
+    .feature-icon {
+      width: 56px; height: 56px; border-radius: 16px; background: rgba(139,92,246,0.15);
+      display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 16px;
+    }
+
+    /* ── Footer ────────────────────────────────────────────── */
+    footer {
+      background: var(--bg2); border-top: 1px solid var(--border);
+      padding: 60px 0 32px;
+    }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 48px; }
+    @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+    .footer-brand p { color: var(--text2); font-size: 0.9rem; margin-top: 12px; max-width: 280px; line-height: 1.7; }
+    .footer-col h4 { font-family: var(--font-display); font-size: 0.9rem; font-weight: 700; margin-bottom: 16px; color: var(--text); }
+    .footer-col a { display: block; color: var(--text2); font-size: 0.9rem; margin-bottom: 10px; transition: color var(--transition); cursor: pointer; }
+    .footer-col a:hover { color: var(--accent); }
+    .footer-bottom { border-top: 1px solid var(--border); padding-top: 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: gap; gap: 12px; }
+    .footer-bottom p { color: var(--text3); font-size: 0.85rem; }
+
+    /* ── Utility ───────────────────────────────────────────── */
+    .text-center { text-align: center; }
+    .mt-8 { margin-top: 8px; }
+    .mt-16 { margin-top: 16px; }
+    .mt-24 { margin-top: 24px; }
+    .mb-8 { margin-bottom: 8px; }
+    .mb-16 { margin-bottom: 16px; }
+    .mb-24 { margin-bottom: 24px; }
+    .hidden { display: none !important; }
+    .flex { display: flex; }
+    .items-center { align-items: center; }
+    .gap-8 { gap: 8px; }
+    .gap-12 { gap: 12px; }
+
+    /* ── Animations ────────────────────────────────────────── */
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .animate-in { animation: fadeIn 0.5s ease forwards; }
+    .delay-1 { animation-delay: 0.1s; opacity: 0; }
+    .delay-2 { animation-delay: 0.2s; opacity: 0; }
+    .delay-3 { animation-delay: 0.3s; opacity: 0; }
+
+    /* ── Tooltip ───────────────────────────────────────────── */
+    .tooltip { position: relative; }
+    .tooltip-text {
+      position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%);
+      background: var(--card); border: 1px solid var(--border); color: var(--text);
+      padding: 8px 12px; border-radius: 8px; font-size: 0.8rem; white-space: nowrap;
+      pointer-events: none; opacity: 0; transition: opacity var(--transition); z-index: 100;
+    }
+    .tooltip:hover .tooltip-text { opacity: 1; }
+
+    /* ── Contact Form ──────────────────────────────────────── */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+    @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
+    .contact-info h2 { font-size: 1.8rem; margin-bottom: 16px; }
+    .contact-info p { color: var(--text2); margin-bottom: 24px; }
+    .contact-item { display: flex; gap: 16px; margin-bottom: 20px; align-items: flex-start; }
+    .contact-item-icon { font-size: 1.4rem; margin-top: 2px; }
+    .contact-item-text h4 { font-size: 0.9rem; font-weight: 600; margin-bottom: 4px; }
+    .contact-item-text p { font-size: 0.9rem; color: var(--text2); margin: 0; }
+
+    /* ── Language-specific display ─────────────────────────── */
+    [data-lang]:not([data-lang="en"]) { display: none; }
+
+    /* ── Pricing / Pro Banner ─────────────────────────────── */
+    .pro-banner {
+      background: linear-gradient(135deg, rgba(139,92,246,0.15), rgba(6,182,212,0.15));
+      border: 1px solid rgba(139,92,246,0.3); border-radius: var(--radius); padding: 28px;
+      display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;
+    }
+    .pro-banner h3 { font-family: var(--font-display); font-size: 1.2rem; }
+    .pro-banner p { color: var(--text2); font-size: 0.9rem; margin-top: 4px; }
+  </style>
+</head>
+<body data-theme="dark">
+  <!-- Background Glows -->
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <!-- ── Navigation ───────────────────────────────── -->
+  <nav>
+    <div class="container">
+      <div class="nav-inner">
+        <div class="logo" onclick="showPage('home')">⚡ NexGen AI</div>
+        <div class="nav-links" id="navLinks">
+          <span class="nav-link" onclick="showPage('home')">Home</span>
+          <span class="nav-link" onclick="showPage('tools')">AI Tools</span>
+          <span class="nav-link" onclick="showPage('chat')">AI Chat</span>
+          <span class="nav-link" onclick="showPage('blog')">Blog</span>
+          <span class="nav-link" onclick="showPage('about')">About</span>
+          <span class="nav-link" onclick="showPage('contact')">Contact</span>
+        </div>
+        <div class="nav-actions">
+          <select class="lang-select" onchange="setLanguage(this.value)" id="langSelect">
+            <option value="en">🌐 EN</option>
+            <option value="si">🇱🇰 SI</option>
+            <option value="hi">🇮🇳 HI</option>
+            <option value="es">🇪🇸 ES</option>
+          </select>
+          <button class="theme-btn" onclick="toggleTheme()" title="Toggle theme" id="themeBtn">🌙</button>
+          <button class="hamburger" onclick="toggleMenu()" id="hamburger">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════════════════════ -->
+  <!-- HOME PAGE                                        -->
+  <!-- ════════════════════════════════════════════════ -->
+  <div class="page active" id="page-home">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-grid"></div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge animate-in">Free AI Tools — No Credit Card Required</div>
+          <h1 class="display animate-in delay-1">
+            Create Better Content<br><span>10× Faster with AI</span>
+          </h1>
+          <p class="subtitle animate-in delay-2">
+            12+ professional AI tools for YouTube, Instagram, TikTok, blogging, SEO, and more.
+            Powered by GPT-4o. Free to use.
+          </p>
+          <div class="hero-actions animate-in delay-3">
+            <button class="btn btn-primary" onclick="showPage('tools')">
+              🚀 Try Free Tools
+            </button>
+            <button class="btn btn-secondary" onclick="showPage('chat')">
+              💬 Open AI Chat
+            </button>
+          </div>
+          <div class="hero-stats animate-in delay-3">
+            <div class="stat"><div class="stat-num">12+</div><div class="stat-label">AI Tools</div></div>
+            <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Free</div></div>
+            <div class="stat"><div class="stat-num">GPT-4o</div><div class="stat-label">Powered</div></div>
+            <div class="stat"><div class="stat-num">4 Lang</div><div class="stat-label">Supported</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AdSense slot - top -->
+    <div class="container">
+      <div class="ad-slot">
+        <!-- Google AdSense: Replace with your ad code after approval -->
+        <span>Advertisement</span>
+      </div>
+    </div>
+
+    <!-- Features -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Why <span class="gradient-text">NexGen AI?</span></h2>
+          <p>Everything a content creator needs, in one free platform</p>
+        </div>
+        <div class="grid-3">
+          <div class="card animate-in">
+            <div class="feature-icon">⚡</div>
+            <h3 style="font-size:1.1rem;margin-bottom:8px;">Instant Results</h3>
+            <p style="color:var(--text2);font-size:0.9rem;">Generate professional content in seconds. No waiting, no limits on quality.</p>
+          </div>
+          <div class="card animate-in delay-1">
+            <div class="feature-icon">🎯</div>
+            <h3 style="font-size:1.1rem;margin-bottom:8px;">SEO Optimized</h3>
+            <p style="color:var(--text2);font-size:0.9rem;">Every tool is trained to produce content that ranks on Google and converts.</p>
+          </div>
+          <div class="card animate-in delay-2">
+            <div class="feature-icon">🌍</div>
+            <h3 style="font-size:1.1rem;margin-bottom:8px;">Multi-Language</h3>
+            <p style="color:var(--text2);font-size:0.9rem;">Generate content in English, Sinhala, Hindi, Spanish and more.</p>
+          </div>
+          <div class="card animate-in">
+            <div class="feature-icon">🔒</div>
+            <h3 style="font-size:1.1rem;margin-bottom:8px;">100% Secure</h3>
+            <p style="color:var(--text2);font-size:0.9rem;">Your API key never touches the browser. All AI calls are server-side.</p>
+          </div>
+          <div class="card animate-in delay-1">
+            <div class="feature-icon">🤖</div>
+            <h3 style="font-size:1.1rem;margin-bottom:8px;">GPT-4o Powered</h3>
+            <p style="color:var(--text2);font-size:0.9rem;">Built on OpenAI's latest model for professional-grade output every time.</p>
+          </div>
+          <div class="card animate-in delay-2">
+            <div class="feature-icon">💰</div>
+            <h3 style="font-size:1.1rem;margin-bottom:8px;">Always Free</h3>
+            <p style="color:var(--text2);font-size:0.9rem;">20 free AI generations per day. No subscription, no hidden fees.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Tools Preview -->
+    <section class="section" style="background:var(--bg2);padding:80px 0;">
+      <div class="container">
+        <div class="section-header">
+          <h2>12 <span class="gradient-text">Powerful AI Tools</span></h2>
+          <p>One platform for all your content creation needs</p>
+        </div>
+        <div class="grid-4" id="homeToolGrid"></div>
+        <div class="text-center mt-24">
+          <button class="btn btn-primary" onclick="showPage('tools')">View All Tools →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Blog -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Latest from the <span class="gradient-text">Blog</span></h2>
+          <p>Tips, strategies, and guides to grow your online presence</p>
+        </div>
+        <div class="grid-3" id="homeBlogGrid"></div>
+        <div class="text-center mt-24">
+          <button class="btn btn-secondary" onclick="showPage('blog')">Read All Articles →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- AdSense bottom -->
+    <div class="container">
+      <div class="ad-slot ad-slot-large">
+        <!-- Google AdSense: Replace with your ad code after approval -->
+        <span>Advertisement</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════ -->
+  <!-- TOOLS PAGE                                       -->
+  <!-- ════════════════════════════════════════════════ -->
+  <div class="page" id="page-tools">
+    <div class="container section">
+      <div class="section-header">
+        <h2><span class="gradient-text">AI Tools</span> Hub</h2>
+        <p>Professional AI tools for content creators — free to use, no registration required</p>
+      </div>
+      <div class="grid-4" id="toolGrid"></div>
+
+      <!-- Tool Workspace -->
+      <div id="toolWorkspace" style="margin-top:40px;">
+        <div class="workspace-card">
+          <div class="workspace-header">
+            <span class="back-btn" onclick="closeWorkspace()">← Back to tools</span>
+            <span id="wsIcon" style="font-size:1.5rem;"></span>
+            <div>
+              <h3 id="wsTitle" style="font-family:var(--font-display);font-size:1.1rem;"></h3>
+              <p id="wsDesc" style="font-size:0.85rem;color:var(--text2);margin-top:2px;"></p>
+            </div>
+          </div>
+          <div class="workspace-body">
+            <div class="grid-2" id="wsFormOutput">
+              <div id="wsForm"></div>
+              <div>
+                <div class="loading-indicator" id="wsLoading">
+                  <div class="spinner"></div>
+                  <span>Generating with GPT-4o...</span>
+                </div>
+                <div class="output-area" id="wsOutput">
+                  <button class="copy-btn" onclick="copyOutput()">📋 Copy</button>
+                  <div id="wsOutputText"></div>
+                </div>
+                <div id="wsPlaceholder" style="background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-sm);padding:40px;text-align:center;color:var(--text3);">
+                  <div style="font-size:2.5rem;margin-bottom:12px;">✨</div>
+                  <p>Fill in the form and click Generate to see your AI content here</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pro Banner -->
+      <div class="pro-banner mt-24">
+        <div>
+          <h3>🚀 Need More Generations?</h3>
+          <p>Currently offering 20 free AI generations per day. Hosting your own instance removes all limits.</p>
+        </div>
+        <button class="btn btn-primary" onclick="showPage('about')">Learn More</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════ -->
+  <!-- CHAT PAGE                                        -->
+  <!-- ════════════════════════════════════════════════ -->
+  <div class="page" id="page-chat">
+    <div class="container" style="padding-top:24px;padding-bottom:24px;">
+      <div style="max-width:900px;margin:0 auto;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+          <div style="width:48px;height:48px;border-radius:12px;background:var(--gradient);display:flex;align-items:center;justify-content:center;font-size:1.4rem;">🤖</div>
+          <div>
+            <h2 style="font-family:var(--font-display);font-size:1.3rem;">NexGen AI Chat</h2>
+            <p style="font-size:0.85rem;color:var(--text2);">Powered by GPT-4o · Supports multi-turn conversations</p>
+          </div>
+        </div>
+        <div class="workspace-card chat-container">
+          <div class="chat-messages" id="chatMessages">
+            <div class="msg bot">
+              <div class="msg-bubble">
+                👋 Hi! I'm NexGen AI — your expert assistant for content creation, marketing, SEO, and growing your online presence.
+
+Ask me anything: YouTube strategies, Instagram tips, how to make money online, business ideas, or just brainstorm together. How can I help you today?
+              </div>
+            </div>
+          </div>
+          <div class="chat-input-area">
+            <input type="text" id="chatInput" placeholder="Ask anything about content, SEO, marketing, business..." onkeydown="if(event.key==='Enter')sendChat()">
+            <button class="btn btn-primary" onclick="sendChat()" id="chatSendBtn">Send →</button>
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;">
+          <button class="btn btn-secondary btn-sm" onclick="setChatPrompt('Give me 10 YouTube title ideas for a tech channel')">YouTube titles</button>
+          <button class="btn btn-secondary btn-sm" onclick="setChatPrompt('What are the best ways to grow on Instagram in 2026?')">Instagram growth</button>
+          <button class="btn btn-secondary btn-sm" onclick="setChatPrompt('Give me 5 online business ideas I can start with no money')">Business ideas</button>
+          <button class="btn btn-secondary btn-sm" onclick="setChatPrompt('How do I rank my blog on Google in 2026?')">SEO tips</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════ -->
+  <!-- BLOG PAGE                                        -->
+  <!-- ════════════════════════════════════════════════ -->
+  <div class="page" id="page-blog">
+    <div class="container section">
+      <div class="section-header">
+        <h2>AI & Growth <span class="gradient-text">Blog</span></h2>
+        <p>In-depth guides on AI tools, content creation, SEO, and making money online</p>
+      </div>
+
+      <!-- AdSense slot -->
+      <div class="ad-slot" style="margin-bottom:40px;">
+        <!-- Google AdSense: Replace with your ad code after approval -->
+        <span>Advertisement</span>
+      </div>
+
+      <div class="grid-3" id="blogGrid"></div>
+    </div>
+
+    <!-- Blog Post View -->
+    <div class="page" id="page-blog-post" style="display:none;">
+      <div class="container section">
+        <div class="blog-post-content">
+          <button class="btn btn-secondary btn-sm mb-24" onclick="showBlogList()">← Back to Blog</button>
+          <div id="blogPostMeta" style="margin-bottom:32px;"></div>
+
+          <!-- AdSense - top of article -->
+          <div class="ad-slot" style="margin-bottom:32px;">
+            <!-- Google AdSense: Replace with your ad code after approval -->
+            <span>Advertisement</span>
+          </div>
+
+          <div id="blogPostContent"></div>
+
+          <!-- AdSense - bottom of article -->
+          <div class="ad-slot ad-slot-large" style="margin-top:40px;">
+            <!-- Google AdSense: Replace with your ad code after approval -->
+            <span>Advertisement</span>
+          </div>
+
+          <div style="margin-top:48px;padding-top:32px;border-top:1px solid var(--border);">
+            <h3 style="font-family:var(--font-display);margin-bottom:16px;">Try Our Free AI Tools</h3>
+            <div class="grid-3" id="blogRelatedTools"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════ -->
+  <!-- ABOUT PAGE                                       -->
+  <!-- ════════════════════════════════════════════════ -->
+  <div class="page" id="page-about">
+    <div class="static-page">
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(139,92,246,0.1);border:1px solid rgba(139,92,246,0.2);border-radius:100px;padding:6px 16px;font-size:0.85rem;color:#a78bfa;margin-bottom:16px;">About Us</div>
+      <h1>Building the Future of<br><span class="gradient-text">AI-Powered Creation</span></h1>
+      <p class="meta">Founded 2026 · Sri Lanka & Global</p>
+
+      <p>NexGen AI is a free AI tools platform built to empower content creators, digital marketers, freelancers, and online entrepreneurs worldwide. We believe powerful AI should be accessible to everyone — regardless of budget or technical skills.</p>
+
+      <p>Our platform provides 12+ professional-grade AI tools for every stage of content creation: ideation, writing, optimization, and distribution. From YouTube creators in Sri Lanka to marketing teams in New York, NexGen AI helps people produce better content, faster.</p>
+
+      <h2>Our Mission</h2>
+      <p>To democratize AI-powered content creation and help people build profitable online businesses using free, accessible tools. We're committed to keeping our core tools free forever, supported by non-intrusive advertising.</p>
+
+      <h2>About the Creator</h2>
+      <div class="card" style="display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap;">
+        <div style="width:80px;height:80px;border-radius:50%;background:var(--gradient);display:flex;align-items:center;justify-content:center;font-size:2rem;flex-shrink:0;">👨‍💻</div>
+        <div>
+          <h3 style="font-family:var(--font-display);font-size:1.2rem;margin-bottom:4px;">Dilshan Nayanajith Ilangasinghe</h3>
+          <p style="color:var(--accent);font-size:0.9rem;margin-bottom:12px;">Founder & Full-Stack Developer · Sri Lanka</p>
+          <p>Dilshan is a full-stack developer and AI enthusiast passionate about building tools that help people earn online. He created NexGen AI to provide world-class AI tools to creators everywhere, starting with his home country of Sri Lanka.</p>
+          <p style="margin-top:8px;"><strong>Email:</strong> <a href="mailto:nayanajithilangasinghe2002@gmail.com" style="color:var(--accent);">nayanajithilangasinghe2002@gmail.com</a></p>
+        </div>
+      </div>
+
+      <h2>What Makes Us Different</h2>
+      <ul>
+        <li><strong>Free forever:</strong> Core tools will always be free. No bait-and-switch pricing.</li>
+        <li><strong>Privacy first:</strong> We don't store your AI-generated content or sell your data.</li>
+        <li><strong>Quality focused:</strong> Every tool is carefully prompted for professional-grade output.</li>
+        <li><strong>Global reach:</strong> Multi-language support for creators worldwide.</li>
+        <li><strong>Transparent:</strong> No hidden fees, no surprise charges.</li>
+      </ul>
+
+      <h2>Technology</h2>
+      <p>NexGen AI is built with Node.js and Express on the backend, powered by OpenAI's GPT-4o-mini model. The frontend is a fast, mobile-first single-page application. All AI API calls are processed server-side — your data never goes directly to OpenAI from your browser.</p>
+
+      <div class="pro-banner mt-24">
+        <div>
+          <h3>🤝 Partner With Us</h3>
+          <p>Interested in sponsorship, advertising, or integration partnerships? We'd love to hear from you.</p>
+        </div>
+        <button class="btn btn-primary" onclick="showPage('contact')">Contact Us</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════ -->
+  <!-- CONTACT PAGE                                     -->
+  <!-- ════════════════════════════════════════════════ -->
+  <div class="page" id="page-contact">
+    <div class="container section">
+      <div class="section-header">
+        <h2>Get in <span class="gradient-text">Touch</span></h2>
+        <p>Questions, feedback, partnerships — we'd love to hear from you</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>Let's Talk</h2>
+          <p>Whether you have a question about our tools, want to report an issue, or are interested in partnership opportunities — reach out and we'll respond within 24 hours.</p>
+          <div class="contact-item">
+            <span class="contact-item-icon">📧</span>
+            <div class="contact-item-text">
+              <h4>Email</h4>
+              <p><a href="mailto:nayanajithilangasinghe2002@gmail.com" style="color:var(--accent);">nayanajithilangasinghe2002@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-item-icon">🌍</span>
+            <div class="contact-item-text">
+              <h4>Location</h4>
+              <p>Sri Lanka (serving users globally)</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-item-icon">⏰</span>
+            <div class="contact-item-text">
+              <h4>Response Time</h4>
+              <p>Usually within 24 hours</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="workspace-card">
+            <div style="padding:28px;">
+              <div class="form-group">
+                <label>Your Name</label>
+                <input type="text" id="contactName" placeholder="John Doe">
+              </div>
+              <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" id="contactEmail" placeholder="you@example.com">
+              </div>
+              <div class="form-group">
+                <label>Subject</label>
+                <select id="contactSubject">
+                  <option>General Question</option>
+                  <option>Bug Report</option>
+                  <option>Partnership / Advertising</option>
+                  <option>Feature Request</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Message</label>
+                <textarea id="contactMessage" rows="5" placeholder="Tell us how we can help..."></textarea>
+              </div>
+              <div id="contactAlert"></div>
+              <button class="btn btn-primary btn-full" onclick="submitContact()">Send Message →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════ -->
+  <!-- PRIVACY POLICY PAGE                              -->
+  <!-- ════════════════════════════════════════════════ -->
+  <div class="page" id="page-privacy">
+    <div class="static-page">
+      <h1>Privacy Policy</h1>
+      <p class="meta">Last updated: January 2026</p>
+      <p>NexGen AI ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and protect your information when you use our website at nexgenai.tools.</p>
+      <h2>Information We Collect</h2>
+      <p>We collect minimal information to provide our services:</p>
+      <ul>
+        <li><strong>Usage data:</strong> Page visits, tool usage counts (anonymized), and general traffic data via Google Analytics</li>
+        <li><strong>Contact form:</strong> Name and email when you contact us voluntarily</li>
+        <li><strong>Technical data:</strong> IP addresses for rate limiting purposes (not stored permanently)</li>
+      </ul>
+      <h2>What We Do NOT Collect</h2>
+      <ul>
+        <li>We do not store the content you input into our AI tools</li>
+        <li>We do not store the AI-generated content you receive</li>
+        <li>We do not require account registration</li>
+        <li>We do not sell your personal data to third parties</li>
+      </ul>
+      <h2>How We Use Your Information</h2>
+      <p>Any information collected is used solely to: operate and improve our services, respond to your inquiries, analyze aggregate traffic patterns, and prevent abuse of our platform.</p>
+      <h2>Third-Party Services</h2>
+      <p>We use the following third-party services:</p>
+      <ul>
+        <li><strong>OpenAI API:</strong> Your inputs are sent to OpenAI to generate responses. See <a href="https://openai.com/privacy" target="_blank" style="color:var(--accent);">OpenAI's Privacy Policy</a>.</li>
+        <li><strong>Google Analytics:</strong> Anonymous usage analytics. See <a href="https://policies.google.com/privacy" target="_blank" style="color:var(--accent);">Google's Privacy Policy</a>.</li>
+        <li><strong>Google AdSense:</strong> We may display advertisements. Google uses cookies to personalize ads.</li>
+      </ul>
+      <h2>Cookies</h2>
+      <p>We use essential cookies to remember your theme preference (dark/light mode) and language selection. We also use Google Analytics and AdSense cookies for analytics and advertising. You can disable cookies in your browser settings.</p>
+      <h2>Data Security</h2>
+      <p>We implement industry-standard security measures including HTTPS encryption, server-side API key handling, and rate limiting. However, no internet transmission is 100% secure.</p>
+      <h2>Children's Privacy</h2>
+      <p>Our services are not directed at children under 13. We do not knowingly collect personal information from children.</p>
+      <h2>Your Rights</h2>
+      <p>You have the right to access, correct, or delete any personal data we hold about you. Contact us at nayanajithilangasinghe2002@gmail.com for any privacy requests.</p>
+      <h2>Changes to This Policy</h2>
+      <p>We may update this policy periodically. Changes will be posted on this page with an updated date.</p>
+      <h2>Contact</h2>
+      <p>For privacy questions: <a href="mailto:nayanajithilangasinghe2002@gmail.com" style="color:var(--accent);">nayanajithilangasinghe2002@gmail.com</a></p>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════ -->
+  <!-- TERMS PAGE                                       -->
+  <!-- ════════════════════════════════════════════════ -->
+  <div class="page" id="page-terms">
+    <div class="static-page">
+      <h1>Terms & Conditions</h1>
+      <p class="meta">Last updated: January 2026</p>
+      <p>By accessing and using NexGen AI (nexgenai.tools), you accept and agree to be bound by these Terms and Conditions. Please read them carefully before using our services.</p>
+      <h2>1. Use of Service</h2>
+      <p>NexGen AI provides free AI-powered content generation tools. You may use these tools for personal and commercial content creation, subject to the following conditions:</p>
+      <ul>
+        <li>You must be at least 13 years of age</li>
+        <li>You agree not to use the service for spam, harassment, or harmful content</li>
+        <li>You will not attempt to circumvent rate limits or abuse the service</li>
+        <li>You are responsible for the content you generate and how you use it</li>
+      </ul>
+      <h2>2. AI-Generated Content</h2>
+      <p>Content generated by NexGen AI is powered by OpenAI's GPT-4o-mini model. You own the content you generate, but we make no guarantees about accuracy, originality, or fitness for specific purposes. Always review AI-generated content before publishing.</p>
+      <h2>3. Intellectual Property</h2>
+      <p>The NexGen AI platform, including its design, code, and branding, is owned by Dilshan Nayanajith Ilangasinghe. Content generated via our tools may be used by you freely for personal and commercial purposes.</p>
+      <h2>4. Rate Limits and Fair Use</h2>
+      <p>We provide 20 free AI generations per IP address per day. Excessive use, automation, or attempts to bypass rate limits are prohibited and may result in IP blocking.</p>
+      <h2>5. Prohibited Content</h2>
+      <p>You agree not to use our tools to generate: illegal content, hate speech, harassment, spam, misleading information, adult content, or content that violates others' rights.</p>
+      <h2>6. Disclaimers</h2>
+      <p>NexGen AI is provided "as is" without warranties. We do not guarantee uptime, accuracy of AI output, or fitness for any particular purpose. We are not responsible for how you use generated content.</p>
+      <h2>7. Limitation of Liability</h2>
+      <p>To the maximum extent permitted by law, NexGen AI and its creator shall not be liable for any indirect, incidental, or consequential damages arising from your use of the service.</p>
+      <h2>8. Advertising</h2>
+      <p>Our free service is supported by Google AdSense advertising. By using our service, you agree to the display of contextual advertisements.</p>
+      <h2>9. Changes to Terms</h2>
+      <p>We reserve the right to modify these terms at any time. Continued use of the service constitutes acceptance of updated terms.</p>
+      <h2>10. Governing Law</h2>
+      <p>These terms are governed by the laws of Sri Lanka. Any disputes shall be resolved in Sri Lankan courts.</p>
+      <h2>Contact</h2>
+      <p>Questions about these terms: <a href="mailto:nayanajithilangasinghe2002@gmail.com" style="color:var(--accent);">nayanajithilangasinghe2002@gmail.com</a></p>
+    </div>
+  </div>
+
+  <!-- ── Footer ──────────────────────────────────── -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">⚡ NexGen AI</div>
+          <p>Free AI tools for content creators, marketers, and freelancers worldwide. Powered by GPT-4o.</p>
+        </div>
+        <div class="footer-col">
+          <h4>AI Tools</h4>
+          <a onclick="openTool('youtube_title')">YouTube Titles</a>
+          <a onclick="openTool('instagram_caption')">Instagram Captions</a>
+          <a onclick="openTool('tiktok_hook')">TikTok Hooks</a>
+          <a onclick="openTool('blog_post')">Blog Writer</a>
+          <a onclick="openTool('seo_keywords')">SEO Keywords</a>
+          <a onclick="showPage('tools')">All Tools →</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a onclick="showPage('blog')">Blog</a>
+          <a onclick="showPage('chat')">AI Chat</a>
+          <a onclick="showPage('about')">About Us</a>
+          <a onclick="showPage('contact')">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a onclick="showPage('privacy')">Privacy Policy</a>
+          <a onclick="showPage('terms')">Terms & Conditions</a>
+          <a href="/sitemap.xml" target="_blank">Sitemap</a>
+          <a href="/robots.txt" target="_blank">Robots.txt</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 NexGen AI · Created by Dilshan Nayanajith Ilangasinghe · Sri Lanka</p>
+        <p style="color:var(--text3);font-size:0.8rem;">Powered by OpenAI GPT-4o · Free AI Tools</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── JavaScript ───────────────────────────────── -->
+  <script>
+  // ═══════════════════════════════════════════════
+  // TOOL DEFINITIONS
+  // ═══════════════════════════════════════════════
+  const TOOLS = [
+    {
+      id: 'youtube_title', icon: '🎬', name: 'YouTube Title Generator', tag: 'YouTube',
+      desc: 'Generate 10 SEO-optimized, high-CTR video titles that get clicks',
+      fields: [
+        { id: 'topic', label: 'Video Topic', type: 'text', placeholder: 'e.g. How to make money with AI in 2026', required: true },
+        { id: 'style', label: 'Channel Style', type: 'select', options: ['Educational', 'Entertainment', 'Vlog', 'Tutorial', 'News & Commentary'] },
+        { id: 'audience', label: 'Target Audience', type: 'text', placeholder: 'e.g. Beginners, marketers, students' }
+      ]
+    },
+    {
+      id: 'youtube_description', icon: '📝', name: 'YouTube Description Writer', tag: 'YouTube',
+      desc: 'Full SEO descriptions with chapters, CTAs and hashtags',
+      fields: [
+        { id: 'topic', label: 'Video Topic', type: 'text', placeholder: 'e.g. Complete guide to Instagram marketing', required: true },
+        { id: 'type', label: 'Video Type', type: 'select', options: ['Educational', 'Tutorial', 'Review', 'Vlog', 'Shorts'] },
+        { id: 'niche', label: 'Channel Niche', type: 'text', placeholder: 'e.g. Digital marketing, fitness, tech' }
+      ]
+    },
+    {
+      id: 'instagram_caption', icon: '📸', name: 'Instagram Caption Generator', tag: 'Instagram',
+      desc: '5 caption styles with full hashtag strategy for maximum reach',
+      fields: [
+        { id: 'topic', label: 'Post Topic', type: 'text', placeholder: 'e.g. Morning workout routine, travel in Bali', required: true },
+        { id: 'niche', label: 'Your Niche', type: 'text', placeholder: 'e.g. Fitness, travel, food, fashion' },
+        { id: 'tone', label: 'Tone', type: 'select', options: ['Engaging & Authentic', 'Inspirational', 'Humorous', 'Professional', 'Casual'] },
+        { id: 'cta', label: 'CTA Goal', type: 'select', options: ['Increase comments', 'Drive profile visits', 'Get saves', 'Boost shares'] }
+      ]
+    },
+    {
+      id: 'tiktok_hook', icon: '🎵', name: 'TikTok Hook Generator', tag: 'TikTok',
+      desc: '10 viral opening hooks to stop the scroll instantly',
+      fields: [
+        { id: 'topic', label: 'Video Topic', type: 'text', placeholder: 'e.g. 5 AI tools that changed my life', required: true },
+        { id: 'style', label: 'Hook Style', type: 'select', options: ['Curiosity Gap', 'Shocking Fact', 'Relatable', 'Challenge', 'POV'] },
+        { id: 'format', label: 'Video Format', type: 'select', options: ['Talking Head', 'POV', 'Tutorial', 'Storytime', 'Transition'] }
+      ]
+    },
+    {
+      id: 'blog_post', icon: '✍️', name: 'Blog Post Generator', tag: 'Blogging',
+      desc: 'Complete SEO-optimized blog posts ready to publish',
+      fields: [
+        { id: 'topic', label: 'Blog Topic', type: 'text', placeholder: 'e.g. Best AI tools for freelancers in 2026', required: true },
+        { id: 'audience', label: 'Target Audience', type: 'text', placeholder: 'e.g. Freelancers, beginners, marketers' },
+        { id: 'tone', label: 'Tone', type: 'select', options: ['Informative & Helpful', 'Conversational', 'Professional', 'Persuasive'] }
+      ]
+    },
+    {
+      id: 'seo_keywords', icon: '🔍', name: 'SEO Keyword Generator', tag: 'SEO',
+      desc: 'Primary, LSI, and long-tail keyword strategy for any topic',
+      fields: [
+        { id: 'topic', label: 'Topic / Niche', type: 'text', placeholder: 'e.g. Online fitness coaching', required: true },
+        { id: 'industry', label: 'Industry', type: 'text', placeholder: 'e.g. Health & wellness, SaaS, ecommerce' },
+        { id: 'target', label: 'Target Audience', type: 'text', placeholder: 'e.g. US adults 25-45' }
+      ]
+    },
+    {
+      id: 'linkedin_post', icon: '💼', name: 'LinkedIn Post Writer', tag: 'LinkedIn',
+      desc: 'Thought leadership posts optimized for maximum impressions',
+      fields: [
+        { id: 'topic', label: 'Post Topic', type: 'text', placeholder: 'e.g. Lessons from growing my freelance business', required: true },
+        { id: 'goal', label: 'Goal', type: 'select', options: ['Build thought leadership', 'Attract clients', 'Share expertise', 'Job hunting', 'Network building'] },
+        { id: 'background', label: 'Your Background', type: 'text', placeholder: 'e.g. Marketing consultant, 5 years experience' }
+      ]
+    },
+    {
+      id: 'email_writer', icon: '📧', name: 'Email Writer', tag: 'Email',
+      desc: 'Complete emails with subject lines and follow-up versions',
+      fields: [
+        { id: 'context', label: 'Email Purpose / Context', type: 'textarea', placeholder: 'e.g. Following up after a job interview at a marketing agency', required: true },
+        { id: 'type', label: 'Email Type', type: 'select', options: ['Cold Outreach', 'Follow-Up', 'Sales/Pitch', 'Job Application', 'Partnership Request', 'Customer Service'] },
+        { id: 'recipient', label: 'Recipient', type: 'text', placeholder: 'e.g. Hiring manager, potential client, CEO' },
+        { id: 'outcome', label: 'Desired Outcome', type: 'text', placeholder: 'e.g. Get a reply, schedule a call, make a sale' }
+      ]
+    },
+    {
+      id: 'resume_builder', icon: '📄', name: 'Resume Builder', tag: 'Career',
+      desc: 'ATS-optimized bullet points, summary, and skills section',
+      fields: [
+        { id: 'role', label: 'Target Role / Job Title', type: 'text', placeholder: 'e.g. Digital Marketing Manager', required: true },
+        { id: 'experience', label: 'Years of Experience', type: 'select', options: ['0-1 years (entry level)', '1-3 years', '3-5 years', '5-10 years', '10+ years'] },
+        { id: 'skills', label: 'Your Key Skills', type: 'text', placeholder: 'e.g. SEO, Google Ads, content writing, analytics' },
+        { id: 'industry', label: 'Industry', type: 'text', placeholder: 'e.g. Marketing, tech, finance, healthcare' }
+      ]
+    },
+    {
+      id: 'hashtag_generator', icon: '#️⃣', name: 'Hashtag Strategy Generator', tag: 'Social',
+      desc: '30 hashtags across 3 tiers with a complete strategy guide',
+      fields: [
+        { id: 'topic', label: 'Content Topic', type: 'text', placeholder: 'e.g. Minimalist home decor', required: true },
+        { id: 'platform', label: 'Platform', type: 'select', options: ['Instagram', 'TikTok', 'LinkedIn', 'Twitter/X', 'YouTube'] },
+        { id: 'niche', label: 'Your Niche', type: 'text', placeholder: 'e.g. Interior design, lifestyle, DIY' }
+      ]
+    },
+    {
+      id: 'tiktok_caption', icon: '🎤', name: 'TikTok Caption Writer', tag: 'TikTok',
+      desc: '5 caption variations with trending hashtags and posting tips',
+      fields: [
+        { id: 'topic', label: 'Video Topic', type: 'text', placeholder: 'e.g. Day in my life as a freelance designer', required: true },
+        { id: 'style', label: 'Video Style', type: 'select', options: ['Educational', 'Entertainment', 'Storytime', 'Tutorial', 'Lifestyle'] },
+        { id: 'target', label: 'Target Audience', type: 'text', placeholder: 'e.g. Gen Z, working professionals, parents' }
+      ]
+    },
+    {
+      id: 'business_idea', icon: '💡', name: 'Business Idea Generator', tag: 'Business',
+      desc: 'Complete business plan analysis with action steps and income timeline',
+      fields: [
+        { id: 'topic', label: 'Your Interest / Skills / Niche', type: 'text', placeholder: 'e.g. I love fitness and want to work from home', required: true },
+        { id: 'budget', label: 'Startup Budget', type: 'select', options: ['$0 (completely free)', '$0-$100', '$100-$500', '$500-$2,000', '$2,000+'] },
+        { id: 'skills', label: 'Your Skills', type: 'text', placeholder: 'e.g. Writing, design, social media, coding' },
+        { id: 'location', label: 'Location', type: 'text', placeholder: 'e.g. Sri Lanka, online/global' }
+      ]
+    }
+  ];
+
+  const BLOG_THUMBS = {
+    'ai-tools': 'ai-tools',
+    'money-online': 'money-online',
+    'youtube-growth': 'youtube-growth',
+    'seo-guide': 'seo-guide',
+    'tiktok-strategy': 'tiktok-strategy',
+    'freelancing': 'freelancing',
+    'passive-income': 'passive-income',
+    'instagram-marketing': 'instagram-marketing',
+    'linkedin-strategy': 'linkedin-strategy',
+    'business-ideas': 'business-ideas'
+  };
+
+  const BLOG_EMOJIS = {
+    'ai-tools': '🤖', 'money-online': '💰', 'youtube-growth': '▶️',
+    'seo-guide': '🔍', 'tiktok-strategy': '🎵', 'freelancing': '💼',
+    'passive-income': '💸', 'instagram-marketing': '📸', 'linkedin-strategy': '🔗',
+    'business-ideas': '💡'
+  };
+
+  // ═══════════════════════════════════════════════
+  // STATE
+  // ═══════════════════════════════════════════════
+  let currentTool = null;
+  let chatHistory = [];
+  let blogPosts = [];
+
+  // ═══════════════════════════════════════════════
+  // INIT
+  // ═══════════════════════════════════════════════
+  document.addEventListener('DOMContentLoaded', async () => {
+    renderToolGrid('toolGrid', true);
+    renderToolGrid('homeToolGrid', false);
+    await loadBlogPosts();
+    loadPreferences();
+  });
+
+  // ═══════════════════════════════════════════════
+  // NAVIGATION
+  // ═══════════════════════════════════════════════
+  function showPage(name) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    const target = document.getElementById(`page-${name}`);
+    if (target) { target.classList.add('active'); }
+
+    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+    const activeLink = [...document.querySelectorAll('.nav-link')].find(l => l.textContent.toLowerCase().includes(name.split('-')[0]));
+    if (activeLink) activeLink.classList.add('active');
+
+    // Close blog post if navigating away from blog
+    if (name !== 'blog') {
+      const bpPage = document.getElementById('page-blog-post');
+      if (bpPage) bpPage.style.display = 'none';
+    }
+
+    // Close mobile menu
+    document.getElementById('navLinks').classList.remove('open');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function openTool(toolId) {
+    showPage('tools');
+    setTimeout(() => showTool(toolId), 100);
+  }
+
+  function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+
+  // ═══════════════════════════════════════════════
+  // THEME
+  // ═══════════════════════════════════════════════
+  function toggleTheme() {
+    const body = document.body;
+    const isLight = body.getAttribute('data-theme') === 'light';
+    body.setAttribute('data-theme', isLight ? 'dark' : 'light');
+    document.getElementById('themeBtn').textContent = isLight ? '🌙' : '☀️';
+    localStorage.setItem('theme', isLight ? 'dark' : 'light');
+  }
+
+  // ═══════════════════════════════════════════════
+  // LANGUAGE
+  // ═══════════════════════════════════════════════
+  const LANG_DATA = {
+    en: { heroTitle: 'Create Better Content<br><span>10× Faster with AI</span>', heroCta: 'Try Free Tools', heroSub: '12+ professional AI tools for YouTube, Instagram, TikTok, blogging, SEO, and more.' },
+    si: { heroTitle: 'AI සමඟ වඩා හොඳ Content<br><span>10× වේගයෙන්</span>', heroCta: 'නොමිලේ භාවිතා කරන්න', heroSub: 'YouTube, Instagram, TikTok, SEO සඳහා AI tools 12+' },
+    hi: { heroTitle: 'AI से बेहतर Content बनाएं<br><span>10× तेज़</span>', heroCta: 'मुफ़्त Tools आज़माएं', heroSub: 'YouTube, Instagram, TikTok, ब्लॉग के लिए 12+ AI Tools' },
+    es: { heroTitle: 'Crea Mejor Contenido<br><span>10× Más Rápido con IA</span>', heroCta: 'Probar Tools Gratis', heroSub: '12+ herramientas de IA para YouTube, Instagram, TikTok, SEO y más.' }
+  };
+
+  function setLanguage(lang) {
+    localStorage.setItem('lang', lang);
+    // Update hero if on home page
+    const data = LANG_DATA[lang] || LANG_DATA.en;
+    const heroH1 = document.querySelector('.hero h1');
+    if (heroH1) heroH1.innerHTML = data.heroTitle;
+    const heroSub = document.querySelector('.hero .subtitle');
+    if (heroSub) heroSub.textContent = data.heroSub;
+  }
+
+  function loadPreferences() {
+    const theme = localStorage.getItem('theme') || 'dark';
+    document.body.setAttribute('data-theme', theme);
+    document.getElementById('themeBtn').textContent = theme === 'light' ? '☀️' : '🌙';
+
+    const lang = localStorage.getItem('lang') || 'en';
+    document.getElementById('langSelect').value = lang;
+    if (lang !== 'en') setLanguage(lang);
+  }
+
+  // ═══════════════════════════════════════════════
+  // TOOL RENDERING
+  // ═══════════════════════════════════════════════
+  function renderToolGrid(containerId, showAll) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    const tools = showAll ? TOOLS : TOOLS.slice(0, 8);
+    container.innerHTML = tools.map(t => `
+      <div class="tool-card" onclick="showTool('${t.id}')">
+        <span class="tool-icon">${t.icon}</span>
+        <div class="tool-name">${t.name}</div>
+        <div class="tool-desc">${t.desc}</div>
+        <span class="tool-tag">${t.tag}</span>
+      </div>
+    `).join('');
+  }
+
+  function showTool(toolId) {
+    const tool = TOOLS.find(t => t.id === toolId);
+    if (!tool) return;
+    currentTool = tool;
+    showPage('tools');
+
+    // Hide tool grid, show workspace
+    document.getElementById('toolGrid').style.display = 'none';
+    const ws = document.getElementById('toolWorkspace');
+    ws.style.display = 'block';
+
+    document.getElementById('wsIcon').textContent = tool.icon;
+    document.getElementById('wsTitle').textContent = tool.name;
+    document.getElementById('wsDesc').textContent = tool.desc;
+
+    // Build form
+    const formEl = document.getElementById('wsForm');
+    formEl.innerHTML = tool.fields.map(f => `
+      <div class="form-group">
+        <label>${f.label}${f.required ? ' *' : ''}</label>
+        ${f.type === 'select'
+          ? `<select id="f_${f.id}"><option value="">Select...</option>${f.options.map(o => `<option value="${o}">${o}</option>`).join('')}</select>`
+          : f.type === 'textarea'
+          ? `<textarea id="f_${f.id}" rows="4" placeholder="${f.placeholder||''}"></textarea>`
+          : `<input type="text" id="f_${f.id}" placeholder="${f.placeholder||''}">`
+        }
+      </div>
+    `).join('') + `
+      <div id="wsAlert"></div>
+      <button class="btn btn-primary btn-full" onclick="generateContent()">
+        ${tool.icon} Generate with AI
+      </button>
+    `;
+
+    // Reset output
+    document.getElementById('wsOutput').classList.remove('visible');
+    document.getElementById('wsPlaceholder').style.display = 'block';
+    document.getElementById('wsLoading').classList.remove('visible');
+
+    ws.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function closeWorkspace() {
+    document.getElementById('toolWorkspace').style.display = 'none';
+    document.getElementById('toolGrid').style.display = '';
+    currentTool = null;
+  }
+
+  // ═══════════════════════════════════════════════
+  // AI GENERATION
+  // ═══════════════════════════════════════════════
+  async function generateContent() {
+    if (!currentTool) return;
+
+    // Gather inputs
+    const inputs = {};
+    for (const f of currentTool.fields) {
+      const el = document.getElementById(`f_${f.id}`);
+      if (el) inputs[f.id] = el.value.trim();
+    }
+
+    // Validate required
+    const required = currentTool.fields.find(f => f.required);
+    if (required && !inputs[required.id]) {
+      showAlert('wsAlert', `Please fill in: ${required.label}`, 'error');
+      return;
+    }
+
+    const btn = document.querySelector('#wsForm .btn-primary');
+    btn.disabled = true;
+    btn.textContent = 'Generating...';
+    document.getElementById('wsAlert').innerHTML = '';
+    document.getElementById('wsLoading').classList.add('visible');
+    document.getElementById('wsPlaceholder').style.display = 'none';
+    document.getElementById('wsOutput').classList.remove('visible');
+
+    try {
+      const res = await fetch('/api/generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ tool: currentTool.id, inputs })
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Generation failed');
+
+      document.getElementById('wsOutputText').textContent = data.result;
+      document.getElementById('wsOutput').classList.add('visible');
+      document.getElementById('wsOutput').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    } catch (err) {
+      showAlert('wsAlert', err.message, 'error');
+    } finally {
+      document.getElementById('wsLoading').classList.remove('visible');
+      btn.disabled = false;
+      btn.textContent = `${currentTool.icon} Generate with AI`;
+    }
+  }
+
+  function copyOutput() {
+    const text = document.getElementById('wsOutputText').textContent;
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = document.querySelector('.copy-btn');
+      btn.textContent = '✅ Copied!';
+      setTimeout(() => btn.textContent = '📋 Copy', 2000);
+    });
+  }
+
+  // ═══════════════════════════════════════════════
+  // CHAT
+  // ═══════════════════════════════════════════════
+  async function sendChat() {
+    const input = document.getElementById('chatInput');
+    const msg = input.value.trim();
+    if (!msg) return;
+
+    input.value = '';
+    addChatMessage(msg, 'user');
+    chatHistory.push({ role: 'user', content: msg });
+
+    const sendBtn = document.getElementById('chatSendBtn');
+    sendBtn.disabled = true;
+    sendBtn.textContent = '...';
+
+    const thinkingId = 'thinking-' + Date.now();
+    addChatMessage('Thinking...', 'bot', thinkingId);
+
+    try {
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ messages: chatHistory })
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Chat error');
+
+      removeChatMessage(thinkingId);
+      addChatMessage(data.result, 'bot');
+      chatHistory.push({ role: 'assistant', content: data.result });
+
+      // Keep history manageable
+      if (chatHistory.length > 40) chatHistory = chatHistory.slice(-40);
+    } catch (err) {
+      removeChatMessage(thinkingId);
+      addChatMessage(`⚠️ Error: ${err.message}`, 'bot');
+    } finally {
+      sendBtn.disabled = false;
+      sendBtn.textContent = 'Send →';
+    }
+  }
+
+  function addChatMessage(text, role, id) {
+    const messages = document.getElementById('chatMessages');
+    const div = document.createElement('div');
+    div.className = `msg ${role}`;
+    if (id) div.id = id;
+    div.innerHTML = `<div class="msg-bubble">${text}</div>`;
+    messages.appendChild(div);
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  function removeChatMessage(id) {
+    const el = document.getElementById(id);
+    if (el) el.remove();
+  }
+
+  function setChatPrompt(text) {
+    document.getElementById('chatInput').value = text;
+    sendChat();
+  }
+
+  // ═══════════════════════════════════════════════
+  // BLOG
+  // ═══════════════════════════════════════════════
+  async function loadBlogPosts() {
+    try {
+      const res = await fetch('/api/blog');
+      blogPosts = await res.json();
+    } catch {
+      blogPosts = [];
+    }
+    renderBlogGrid('blogGrid', blogPosts);
+    renderBlogGrid('homeBlogGrid', blogPosts.slice(0, 3));
+  }
+
+  function renderBlogGrid(containerId, posts) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    if (!posts.length) {
+      container.innerHTML = '<p style="color:var(--text2);grid-column:1/-1;text-align:center;">No blog posts found.</p>';
+      return;
+    }
+    container.innerHTML = posts.map(p => `
+      <div class="blog-card" onclick="openBlogPost('${p.slug}')">
+        <div class="blog-thumb ${BLOG_THUMBS[p.image] || 'ai-tools'}">
+          ${BLOG_EMOJIS[p.image] || '📝'}
+        </div>
+        <div class="blog-info">
+          <div class="blog-cat">${p.category}</div>
+          <h3 class="blog-title">${p.title}</h3>
+          <p class="blog-excerpt">${p.excerpt}</p>
+          <div class="blog-meta">
+            <span>📅 ${p.date}</span>
+            <span>⏱ ${p.readTime}</span>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  async function openBlogPost(slug) {
+    try {
+      const res = await fetch(`/api/blog/${slug}`);
+      const post = await res.json();
+      if (!res.ok) throw new Error('Not found');
+
+      // Show blog post view
+      document.getElementById('page-blog-post').style.display = 'block';
+      document.getElementById('blogGrid') && (document.getElementById('blogGrid').style.display = 'none');
+
+      document.getElementById('blogPostMeta').innerHTML = `
+        <div style="display:inline-block;background:rgba(139,92,246,0.1);border:1px solid rgba(139,92,246,0.2);border-radius:100px;padding:4px 14px;font-size:0.8rem;color:#a78bfa;margin-bottom:12px;">${post.category}</div>
+        <h1 style="font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:16px;line-height:1.2;">${post.title}</h1>
+        <p style="color:var(--text2);font-size:1.05rem;margin-bottom:20px;">${post.excerpt}</p>
+        <div style="display:flex;gap:16px;color:var(--text3);font-size:0.85rem;margin-bottom:8px;">
+          <span>📅 ${post.date}</span>
+          <span>⏱ ${post.readTime}</span>
+          <span>✍️ Dilshan N. Ilangasinghe</span>
+        </div>
+      `;
+      document.getElementById('blogPostContent').innerHTML = post.content;
+
+      // Related tools
+      const relatedTools = TOOLS.slice(0, 3);
+      document.getElementById('blogRelatedTools').innerHTML = relatedTools.map(t => `
+        <div class="tool-card" onclick="openTool('${t.id}')">
+          <span class="tool-icon" style="font-size:1.5rem;">${t.icon}</span>
+          <div class="tool-name" style="font-size:0.9rem;">${t.name}</div>
+          <span class="tool-tag">${t.tag}</span>
+        </div>
+      `).join('');
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  function showBlogList() {
+    document.getElementById('page-blog-post').style.display = 'none';
+    const blogGrid = document.getElementById('blogGrid');
+    if (blogGrid) blogGrid.style.display = '';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // ═══════════════════════════════════════════════
+  // CONTACT
+  // ═══════════════════════════════════════════════
+  function submitContact() {
+    const name = document.getElementById('contactName').value.trim();
+    const email = document.getElementById('contactEmail').value.trim();
+    const message = document.getElementById('contactMessage').value.trim();
+
+    if (!name || !email || !message) {
+      showAlert('contactAlert', 'Please fill in all required fields.', 'error');
+      return;
+    }
+    if (!email.includes('@')) {
+      showAlert('contactAlert', 'Please enter a valid email address.', 'error');
+      return;
+    }
+
+    // In production, you'd send to your backend / email service
+    showAlert('contactAlert', `✅ Thank you ${name}! Message sent. We'll reply to ${email} within 24 hours.`, 'success');
+    document.getElementById('contactName').value = '';
+    document.getElementById('contactEmail').value = '';
+    document.getElementById('contactMessage').value = '';
+  }
+
+  // ═══════════════════════════════════════════════
+  // UTILITIES
+  // ═══════════════════════════════════════════════
+  function showAlert(containerId, message, type) {
+    const el = document.getElementById(containerId);
+    if (el) {
+      el.innerHTML = `<div class="alert alert-${type}">${message}</div>`;
+    }
+  }
+  </script>
+</body>
+</html>

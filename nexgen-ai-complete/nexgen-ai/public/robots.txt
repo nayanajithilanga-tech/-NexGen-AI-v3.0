@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://nexgenai.tools/sitemap.xml
+
+# Crawl-delay for bots
+Crawl-delay: 1

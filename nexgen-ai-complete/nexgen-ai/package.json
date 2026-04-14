@@ -1,0 +1,35 @@
+{
+  "name": "nexgen-ai",
+  "version": "3.0.0",
+  "description": "NexGen AI - Free AI Tools for Content Creators, Marketers & Freelancers",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "helmet": "^7.1.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "Dilshan Nayanajith Ilangasinghe",
+  "license": "MIT",
+  "keywords": [
+    "ai-tools",
+    "content-creator",
+    "seo",
+    "youtube",
+    "instagram",
+    "tiktok",
+    "blog",
+    "openai"
+  ]
+}
